@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stock Insight AI</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero-card">
+        <div class="hero-copy">
+          <p class="eyebrow">GKAI-powered stock research</p>
+          <h1>Ask about any stock and get a smart investment-style response.</h1>
+          <p class="subtext">
+            Enter a stock symbol and a question to see a good investment answer. The GKAI will analyze the stock and provide insights based on your question.
+          </p>
+        </div>
+
+        <form id="stock-form" class="stock-form">
+          <label for="stock-symbol">Stock symbol</label>
+          <input
+            id="stock-symbol"
+            name="stock-symbol"
+            type="text"
+            placeholder="Example: AAPL"
+            autocomplete="off"
+            required
+            maxlength="4"
+          />
+
+          <label for="investment-goal">What would you like to know?</label>
+          <textarea
+            id="investment-goal"
+            name="investment-goal"
+            rows="4"
+            placeholder="Example: Is this stock a good long-term buy?"
+          ></textarea>
+
+          <button type="submit">Ask GKAI</button>
+        </form>
+      </section>
+
+      <section class="response-card" aria-live="polite">
+        <div class="response-header">
+          <h2>GKAI response</h2>
+          <p id="status">Enter a symbol to start.</p>
+        </div>
+        <div id="ai-response" class="response-body">
+          Your answer will appear here once the GKAI is done analyzing the stock.
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

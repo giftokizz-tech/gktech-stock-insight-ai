@@ -1,0 +1,15 @@
+{
+  "type": "module",
+  "name": "stock-insight-ai",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node script.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "node-fetch": "^3.3.2",
+    "openai": "^6.45.0"
+  }
+}
