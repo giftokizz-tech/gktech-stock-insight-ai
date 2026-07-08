@@ -10,15 +10,15 @@
     <main class="app-shell">
       <section class="hero-card">
         <div class="hero-copy">
-          <p class="eyebrow">GKAI-powered stock research</p>
+          <p class="eyebrow">AI-powered stock research</p>
           <h1>Ask about any stock and get a smart investment-style response.</h1>
           <p class="subtext">
-            Enter a stock symbol and a question to see a good investment answer. The GKAI will analyze the stock and provide insights based on your question.
+            Enter a stock symbol and a question to see a good investment answer. The GktechAI will analyze the stock and provide insights based on your question.
           </p>
         </div>
 
         <form id="stock-form" class="stock-form">
-          <label for="stock-symbol">Stock symbol</label>
+          <label for="stock-symbol">Type in a Stock symbol</label>
           <input
             id="stock-symbol"
             name="stock-symbol"
@@ -29,7 +29,7 @@
             maxlength="4"
           />
 
-          <label for="investment-goal">What would you like to know?</label>
+          <label for="investment-goal">What would you like to know? (optional)</label>
           <textarea
             id="investment-goal"
             name="investment-goal"
@@ -37,17 +37,17 @@
             placeholder="Example: Is this stock a good long-term buy?"
           ></textarea>
 
-          <button type="submit">Ask GKAI</button>
+          <button type="submit">Ask GktechAI</button>
         </form>
       </section>
 
       <section class="response-card" aria-live="polite">
         <div class="response-header">
-          <h2>GKAI response</h2>
+          <h2>GktechAI response</h2>
           <p id="status">Enter a symbol to start.</p>
         </div>
         <div id="ai-response" class="response-body">
-          Your answer will appear here once the GKAI is done analyzing the stock.
+          Your answer will appear here once GktechAI is done analyzing the stock.
         </div>
       </section>
     </main>
