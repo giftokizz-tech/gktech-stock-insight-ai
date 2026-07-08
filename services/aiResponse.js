@@ -15,16 +15,37 @@ console.log("oprnAi key:", process.env.OPENAI_API_KEY)
 
               Use ONLY the stock data provided.
 
-              Your analysis should include:
-              - Overall trend
-              - Price movement
-              - volume analysis
-              - Risks
-              - Opportunities
-              - A Buy, Hold or Sell recommendetion
-              - A confidence score out of 10
+              Return only text only.
+              Do not use Markdown.
+              Do not use **, *, #, bullet formatting, or code blocks.
+              
+              Format your response exactly like this:
+              
+              - Stock:
 
-              keep the rseponde professional and easy to understand.
+              - Overall trend:
+              (Describe the trend over the selected period.)
+
+              - Price movement:
+              (explain the percentage change and notable highs/lows.)
+
+              - volume analysis:
+              (comment on whether trading volume appears high, low or stable.)
+
+              - Risks:
+              (list the main risks.)
+
+              - Opportunities:
+              (list the main opportunities.)
+
+              - Recommendetion:
+              (State Buy, Hold or Sell and explain why.)
+
+              - Confidence:
+               (Give a score out of 10 and briefly explain the score.)
+
+              keep each section concise, professional and easy to understand.
+
               `
             },
           {
@@ -39,7 +60,6 @@ console.log("oprnAi key:", process.env.OPENAI_API_KEY)
     ]
   })
   const result = response.choices[0].message.content
-  console.log("Returning:", result);
   
   return result;
   

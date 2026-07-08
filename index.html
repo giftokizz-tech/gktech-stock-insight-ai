@@ -11,10 +11,42 @@
       <section class="hero-card">
         <div class="hero-copy">
           <p class="eyebrow">AI-powered stock research</p>
-          <h1>Ask about any stock and get a smart investment-style response.</h1>
+          <h1>Ask about any stock and get a smart investment response.</h1>
           <p class="subtext">
-            Enter a stock symbol and a question to see a good investment answer. The GktechAI will analyze the stock and provide insights based on your question.
+            Enter a stock symbol and a question to see a good investment answer. The Gk-techAI will analyze the stock and provide insights based on your question.
           </p>
+          <p>
+            <strong class="eyebrow">Exampl of stocks to check:</strong>
+          </p>
+            <div class="stock-list" >
+              <ul>
+                <li>NVDA</li>
+                <li>AAPL</li>
+                <li>GOOGL</li>
+                <li>GOOG</li>
+                <li>MSFT</li>
+              
+                <li>AMZN</li>
+                <li>TSM</li>
+                <li>SPCX</li>
+                <li>AVGO</li>
+                <li>META</li>
+              
+                <li>TSLA</li>
+                <li>LLY</li>
+                <li>BRK-A</li>
+                <li>MU</li>
+                <li>BRK-B</li>
+              
+                <li>WMT</li>
+                <li>JPM</li>
+                <li>AMD</li>
+                <li>ASML</li>
+                <li>ASMLF. . .</li>
+            </ul>
+        </div>
+
+            
         </div>
 
         <form id="stock-form" class="stock-form">
@@ -26,7 +58,7 @@
             placeholder="Example: AAPL"
             autocomplete="off"
             required
-            maxlength="4"
+            maxlength="10"
           />
 
           <label for="investment-goal">What would you like to know? (optional)</label>
@@ -37,21 +69,20 @@
             placeholder="Example: Is this stock a good long-term buy?"
           ></textarea>
 
-          <button type="submit">Ask GktechAI</button>
+          <button type="submit">Ask Gk-techAI</button>
         </form>
       </section>
 
       <section class="response-card" aria-live="polite">
         <div class="response-header">
-          <h2>GktechAI response</h2>
+          <h2>Gk-techAI response</h2>
           <p id="status">Enter a symbol to start.</p>
         </div>
         <div id="ai-response" class="response-body">
-          Your answer will appear here once GktechAI is done analyzing the stock.
+          Your answer will appear here once Gk-techAI is done analyzing the stock.
         </div>
       </section>
     </main>
-
     <script type="module" src="script.js"></script>
   </body>
 </html>

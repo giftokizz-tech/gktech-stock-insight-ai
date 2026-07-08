@@ -22,7 +22,7 @@ form.addEventListener("submit", askAI);
         const response = await fetch("http://localhost:3000/analyze", {
           method: "POST",
           headers: {
-            'Content-Type': 'application/json'
+            "Content-Type": "application/json"
           },
           body: JSON.stringify({
           question: symbol,
@@ -41,7 +41,10 @@ form.addEventListener("submit", askAI);
         
         statusBox.textContent = `Analysis for ${symbol} completed.`;
         responseBox.innerHTML = `
-        <p><strong>Analysis:</strong> ${data.analysis}</p> `
+        <p><strong>Analysis:</strong> ${data.analysis
+          .replace(/#/g, "")
+          .replace(/\*\*/g, "")
+        }</p> `
       } catch (error) {
         console.error("Error fetching stock analysis:", error);
         statusBox.textContent = "Error fetching stock analysis.";

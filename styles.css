@@ -177,3 +177,26 @@ body {
     align-items: flex-start;
   }
 }
+
+.stock-list ul{
+  display:grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+}
+
+.stock-list li{
+  background: #14304f;
+  border: 1px solid #2fa8ff;
+  border-radius: 8px;
+  padding: 6px 10px;
+  text-align: center;
+  font-weight: 400;
+  /* cursor: pointer; */
+  transition: 2s;
+}
+/* .stock-list li:hover{
+  background: #2fa8ff;
+  color: #fff;
+} */
