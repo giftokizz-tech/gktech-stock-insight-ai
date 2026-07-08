@@ -9,8 +9,8 @@ form.addEventListener("submit", askAI);
 
     async function askAI(event) {
       event.preventDefault();
-      const symbol =  symbolInput.value.toUpperCase()
-
+      const symbol =  symbolInput.value.toUpperCase().trim()
+      const goal = goalInput.value.trim()
       responseBox.innerHTML = '<div class="loading"></div>';
       goalInput.disabled = true;
       symbolInput.disabled = true;
@@ -25,29 +25,23 @@ form.addEventListener("submit", askAI);
             'Content-Type': 'application/json'
           },
           body: JSON.stringify({
-          qestion: symbol,
-          goal:  goalInput.value
+          question: symbol,
+          goal:  goal
           })
         }
       );
+      if (!response.ok) {
+          throw new Error(`HTTP Error: ${response.status}`);
+
+      }
         const data = await response.json();
-        // if (!response.ok) {
-        //   throw new Error(data.error);
-          
-        // }
+
+        console.log(JSON.stringify(data, null, 2));
+        
+        
         statusBox.textContent = `Analysis for ${symbol} completed.`;
         responseBox.innerHTML = `
-        <p><strong>Analysis:</strong> ${data.summary}</p> `
-
-        // <p>
-        // <strong>Analysis:</strong> 
-        // ${data.percentageChange 
-        //   ? data.percentageChange.toFixed(2)
-        //   : 'N/A'}%
-        // </p>
-        // `
-        
-        
+        <p><strong>Analysis:</strong> ${data.analysis}</p> `
       } catch (error) {
         console.error("Error fetching stock analysis:", error);
         statusBox.textContent = "Error fetching stock analysis.";
